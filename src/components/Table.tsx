@@ -73,6 +73,8 @@ export default function ArtTable() {
                 selection={currentSelection}
                 onSelectionChange={onSelectionChange}
                 dataKey="id"
+                paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
             >
                 <Column selectionMode="multiple" headerStyle={{ width: '3rem' }} />
                 <Column field="title" header="Title" />
@@ -86,6 +88,6 @@ export default function ArtTable() {
                 <Column field="date_start" header="Start" />
                 <Column field="date_end" header="End" />
             </DataTable>
-        </div>
+        </div >
     );
 }
